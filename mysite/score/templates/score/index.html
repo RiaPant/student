@@ -1,0 +1,23 @@
+{% extends 'score/base.html' %}
+{% block main_content %}
+<hr>
+
+<br><br><br><br>
+
+<div class="container">
+<div class="row">
+  <div class="col-md-6">
+      To view the existing database click here
+
+        <a class="btn btn-primary btn-lg" href="{% url 'score:results' %}" role="button">Results</a>
+  </div>
+  <div class="col-md-6">
+           To put your entry into the databse click here
+        <a class="btn btn-primary btn-lg" href="{% url 'score:create' %}" role="button">Submit</a>
+  </div>
+</div>
+
+</div>
+
+
+{% endblock %}

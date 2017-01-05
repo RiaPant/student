@@ -1,0 +1,28 @@
+{% load staticfiles  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Portal</title>
+        <link rel="stylesheet" type="text/css" href ="{% static 'score/bootstrap-3.3.7-dist/css/bootstrap.min.css'%}" />
+        <link rel="stylesheet" type="text/css" href ="{% static 'score/style.css'%}" />
+        <link rel="stylesheet" type="text/css" href ="{% static 'score/bootstrap-3.3.7-dist/css/bootstrap.css'%}" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+<body>
+ <div class="container">
+
+<div class="jumbotron">
+  <h1>Student Portal</h1>
+  <p>Welcome to the official students portal of IGTDUW</p>
+
+</div>
+ </div>
+
+{% block main_content %}
+{% endblock %}
+</body>
+</html>

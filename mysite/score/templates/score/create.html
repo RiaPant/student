@@ -1,0 +1,27 @@
+{% extends 'score/base.html' %}
+{% block main_content %}
+
+
+<div class="container">
+    <div class="form-group"></div>
+<form action="{% url 'score:create' %}" method="post">
+{% csrf_token %}
+ {{ form.as_p }}
+
+
+<br>
+    <input type="submit" value="Submit" class="btn btn-default"/>
+
+</form>
+    <br>
+
+</div>
+ <div  style="position: absolute;
+    right: 250px;
+    ">
+<a href="{% url 'score:index' %}"><button class="orange-circle-button:hover orange-circle-button orange-circle-button:visited " > Home</button></a>
+<a href="{% url 'score:results' %}"><button class="orange-circle-button:hover orange-circle-button orange-circle-button:visited " > Results</button></a>
+</div>
+
+
+{% endblock %}

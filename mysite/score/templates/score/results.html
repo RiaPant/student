@@ -1,0 +1,68 @@
+{% extends 'score/base.html' %}
+{% block main_content %}
+<div class="container" border="5px">
+<table class="table table-bordered">
+    <tr>
+        <th>First Name</th>
+    <th>Last Name</th>
+        <th>Marks</th>
+    <th>
+        Enrollment number
+    </th>
+
+
+    </tr>
+{% for student in ppl reversed %}
+    {% if student.marks >= 90 %}
+        <tr class="active">
+            <td>{{student.first_name}}</td>
+            <td>{{student.last_name}}</td>
+            <td>{{student.marks}}</td>
+            <td>{{student.enroll_no}}</td>
+        </tr>
+    {% elif student.marks >= 80 %}
+        <tr class="success">
+            <td>{{student.first_name}}</td>
+            <td>{{student.last_name}}</td>
+            <td>{{student.marks}}</td>
+            <td>{{student.enroll_no}}</td>
+        </tr>
+    {% elif student.marks >= 65 %}
+        <tr class="info">
+            <td>{{student.first_name}}</td>
+            <td>{{student.last_name}}</td>
+            <td>{{student.marks}}</td>
+            <td>{{student.enroll_no}}</td>
+        </tr>
+    {% elif student.marks >= 50 %}
+        <tr class="warning">
+            <td>{{student.first_name}}</td>
+            <td>{{student.last_name}}</td>
+            <td>{{student.marks}}</td>
+            <td>{{student.enroll_no}}</td>
+        </tr>
+    {% else %}
+        <tr class="danger">
+            <td>{{student.first_name}}</td>
+            <td>{{student.last_name}}</td>
+            <td>{{student.marks}}</td>
+            <td>{{student.enroll_no}}</td>
+        </tr>
+{% endif %}
+
+{% endfor%}
+    </table>
+</div>
+
+<div  style="position: absolute;
+    right: 150px;
+    ">
+<a href="{% url 'score:index' %}"><button class="orange-circle-button:hover orange-circle-button orange-circle-button:visited " > Home</button></a>
+<a href="{% url 'score:create' %}"><button class="orange-circle-button:hover orange-circle-button orange-circle-button:visited " > Submit new <br>
+entry</button></a>
+</div>
+
+
+
+
+{% endblock %}
